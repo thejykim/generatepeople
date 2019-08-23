@@ -67,6 +67,7 @@ public class CreatePerson {
 		}
 	}
 	
+	// Delegates the unique function to the appropriate class, based on the type of Person.
 	public void unique() {
 		p.unique();
 	}
