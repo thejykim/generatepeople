@@ -1,6 +1,6 @@
 package pkg1;
 
-public class Person {
+public abstract class Person {
 
 	protected int weight;
 	protected String name;
@@ -55,6 +55,7 @@ public class Person {
 		this.friendliness = friendliness;
 	}
 
+	// Methods
 	public void introduceSelf() {
 		if (friendliness > 7) {
 			System.out.println("Hi there! My name is " + name + ". So nice to meet you.");
@@ -64,6 +65,8 @@ public class Person {
 			System.out.println("Umm, hi.");
 		}
 	}
+	
+	public abstract void unique();
 	
 	public String toString() {
 		return name + " is a human being.";

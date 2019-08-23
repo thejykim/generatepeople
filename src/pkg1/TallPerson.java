@@ -12,9 +12,7 @@ public class TallPerson extends Person {
 		friendliness = 5;
 	}
 	
-	public void introduceSelf() {
-		super.introduceSelf();
-		System.out.println("Am I tall? Easy one. Yes.");
+	public void unique() {
+		System.out.println("Bow before me you oompa loompa");
 	}
-	
 }
