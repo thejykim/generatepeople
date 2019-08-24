@@ -3,15 +3,20 @@ package pkg1;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-		CreatePerson Luke = new CreatePerson(new AthleticPerson(), 140, "Luke", 69, 6);
-		CreatePerson Joey = new CreatePerson(new TallPerson(), 166, "Joey", 75, 8);
+		CreatePerson Chris = new CreatePerson(new AthleticPerson());
+		CreatePerson Joey = new CreatePerson(new TallPerson());
+		CreatePerson Boring = new CreatePerson(new DefaultPerson());
 		
-		Luke.introduceSelf();
-		Luke.unique();
-		Joey.introduceSelf();
+		// Most of the code below will only be used to test the latest features
+		Chris.giveName("Chris");
+		System.out.println(Chris.getName());
+		Chris.unique();
+		Chris.giveName("Anything else");
+		Joey.giveName("Joey");
 		Joey.unique();
+		System.out.println(Joey.getName());
+		Boring.unique();
 	}
 
 }
