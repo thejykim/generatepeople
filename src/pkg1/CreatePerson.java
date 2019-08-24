@@ -5,23 +5,39 @@ public class CreatePerson {
 	protected int weight;
 	protected String name;
 	protected int height;
-	protected int friendliness;
+	protected double friendliness;
 	protected Person p;
+	protected boolean givenName;
 	
-	//Constructors
+	// Constructors
+	
+	// To manually create all aspects of a person
 	public CreatePerson(Person p, int weight, String name, int height, int friendliness) {
 		this.p = p;
 		this.weight = weight;
 		this.name = name;
 		this.height = height;
 		this.friendliness = friendliness;
+		givenName = false;
 	}
 	
-	//For a default generation of a nameless person
+	// For the default generation of a child with characteristic
+	
+	public CreatePerson(Person p) {
+		this.p = p;
+		weight = 6;
+		height = 12;
+		friendliness = Math.random() * 10;
+		givenName = false;
+	}
+	
+	// For a generation of a nameless person without characteristic
 	public CreatePerson() {
+		p = new DefaultPerson();
 		weight = 150;
 		height = 70;
 		friendliness = 5;
+		givenName = false;
 	}
 	
 	//Getters and Setters
@@ -49,7 +65,7 @@ public class CreatePerson {
 		this.height = height;
 	}
 
-	public int getFriendliness() {
+	public double getFriendliness() {
 		return friendliness;
 	}
 
@@ -72,8 +88,15 @@ public class CreatePerson {
 		p.unique();
 	}
 	
-	public String toString() {
-		return name + " is a human being.";
+	// Baby name setter
+	
+	public void giveName(String name) {
+		if (givenName == false) {
+			this.name = name;
+			givenName = true;
+		} else {
+			System.out.println("You've already given this person a name. Try setName().");
+		}
 	}
 	
 }
