@@ -72,6 +72,10 @@ public class CreatePerson {
 	public void setFriendliness(int friendliness) {
 		this.friendliness = friendliness;
 	}
+	
+	public boolean givenName() {
+		return givenName;
+	}
 
 	public void introduceSelf() {
 		if (friendliness > 7) {
@@ -84,8 +88,8 @@ public class CreatePerson {
 	}
 	
 	// Delegates the unique function to the appropriate class, based on the type of Person.
-	public void unique() {
-		p.unique();
+	public String unique() {
+		return p.unique();
 	}
 	
 	// Baby name setter

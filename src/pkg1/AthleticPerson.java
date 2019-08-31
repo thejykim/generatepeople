@@ -2,8 +2,8 @@ package pkg1;
 
 public class AthleticPerson implements Person {
 
-	public void unique() {
-		System.out.println("Zoom zoom mf");
+	public String unique() {
+		return "Zoom zoom mf";
 	}
 	
 	public void showOff() {
